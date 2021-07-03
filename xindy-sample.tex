@@ -1,0 +1,26 @@
+\documentclass[a4paper]{article}
+
+% It is important that hyperref be loaded _before_
+% imakeidx. See https://github.com/debian-tex/xindy/issues/4
+\usepackage{hyperref}
+\usepackage[xindy]{imakeidx}
+
+\makeindex[program=xindy,options=-M indexstyle.xdy]
+
+\newcommand{\definingindexentry}[1]{\index{#1@#1|textbf}#1}
+\newcommand{\indexentry}[1]{\index{#1@#1}#1}
+
+
+\begin{document}
+
+This is is an \definingindexentry{example} of how \definingindexentry{xindy} creates an \definingindexentry{index}.
+
+\clearpage{}
+
+On this page we see how an \indexentry{example} is referenced for the \indexentry{index}. Anyone care to guess how \indexentry{xindy} works?
+
+\clearpage{}
+
+\printindex
+
+\end{document}
