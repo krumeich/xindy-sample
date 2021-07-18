@@ -5,9 +5,6 @@
 
 (markup-locclass-list :open "\dotfill" :sep "")
 
-(define-attributes (( "texttt" "textsc" )) )
 (markup-locref   :attr  "textbf"     :open "\textbf{\hyperpage{" :close "}}")
 (markup-locref   :attr  "textit"     :open "\textit{\hyperpage{" :close "}}")
-(markup-locref   :attr  "texttt"     :open "\texttt{\hyperpage{" :close "}}")
-(markup-locref   :attr  "textsc"     :open "\textsc{\hyperpage{" :close "}}")
 (markup-locref   :attr  "default"    :open "\hyperpage{" :close "}")
